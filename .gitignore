@@ -50,4 +50,4 @@ requirements.copy.txt
 
 .python-version
 
-/integration/lambdas/golang/handler.zip
+/tests/integration/lambdas/golang/handler.zip
