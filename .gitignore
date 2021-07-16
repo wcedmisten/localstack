@@ -13,6 +13,7 @@ localstack/infra/
 package-lock.json
 /nosetests.xml
 
+venv
 /.venv*
 /.coverage
 .settings/
@@ -48,7 +49,5 @@ requirements.copy.txt
 *tfplan
 
 .python-version
-
-venv
 
 /integration/lambdas/golang/handler.zip
