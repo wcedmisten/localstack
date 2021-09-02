@@ -69,7 +69,13 @@ if __name__ == "__main__":
         packages=find_packages(exclude=("tests", "tests.*")),
         package_data=package_data,
         install_requires=install_requires,
-        extras_require={"full": extra_requires},
+        extras_require={"full": extra_requires + ["lst-vendor-elasticmq"], "pymq": ["pymq>=0.3"]},
+        entry_points={
+            "localstack.provider.sqs": [
+                "moto = localstack.mytest:foo",
+                "elasticmq = localstack.mytest:bar [localstack-pkg-elasticmq]",
+            ],
+        },
         dependency_links=dependency_links,
         test_suite="tests",
         license="Apache License 2.0",
